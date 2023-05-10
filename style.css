@@ -39,7 +39,7 @@ header h2 {
     grid-row-start: 2;
     font-size: 17px;
 }
-header li {
+header li.menu {
     display: flex;
     justify-self: end;
     margin-right: 10vw;
@@ -50,12 +50,21 @@ header a {
     transition: 1s;
     cursor: pointer;
     padding: 10px;
+    text-decoration: none;
+    color: white;
 }
 header a:hover {   
     border: 2px solid white;
     background-color: rgba(255, 255, 255, 0.142);
 }
-
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.mobile {
+    display: none;
+}
 /* ----------------------------------------ARTICLES */
 .body {
     text-align: center;
@@ -106,6 +115,10 @@ article div {
 }
 .geral {
     display: grid;
+}
+.botao a {
+    color: black;
+    text-decoration: none;
 }
 /* ----------------------------------------PESQUISA */
 #pesquisa {
@@ -181,4 +194,50 @@ footer img {
 }
 #index {
     margin-left: 1vw;
+}
+
+#text {
+    text-align: justify;
+    background-color: white;
+}
+#text h1 {
+    text-align: center;
+}
+#text h2 {
+    font-size: large;
+    margin-top: 2vh
+}
+#text h3 {
+    font-size: medium;
+    margin-top: 1vh;
+}
+#text img {
+    max-width: 40vw;
+}
+label {
+   font-style: italic;
+}
+
+.ref {
+    background-color: aliceblue;
+}
+.ref h1 {
+    font-size: 4vh;
+}
+.ref a {
+    margin-top: 10vh;
+}
+
+@media(max-width: 480px) {
+    .mobile {
+        display: contents;
+    }
+    header li.menu {
+        display: none;
+    }
+    article {
+    position: relative;
+    top: auto;
+    left: 0;
+    }
 }
