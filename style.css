@@ -65,6 +65,9 @@ button {
 .mobile {
     display: none;
 }
+.menuMobile {
+    display: none;
+}
 /* ----------------------------------------ARTICLES */
 .body {
     text-align: center;
@@ -196,6 +199,7 @@ footer img {
     margin-left: 1vw;
 }
 
+/* ----------------------------------------TEXTO*/
 #text {
     text-align: justify;
     background-color: white;
@@ -217,7 +221,7 @@ footer img {
 label {
    font-style: italic;
 }
-
+/* ----------------------------------------REFERENCIAS*/
 .ref {
     background-color: aliceblue;
 }
@@ -228,6 +232,45 @@ label {
     margin-top: 10vh;
 }
 
+/* ----------------------------------------MOBILE*/
+.menuMobile {
+    display: grid;
+    z-index: 30;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 15vh;
+    animation: text-reveal 1s;
+}
+.menuMobile ul {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+}
+.menuMobile li {
+    list-style: none;
+    display: flex;
+}
+#botao {
+    margin-top: 5px;
+    justify-items: end;
+}
+#menur {
+    justify-items: center;
+}
+.hidden {
+    display: none;
+}
+
+@keyframes text-reveal{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 @media(max-width: 480px) {
     .mobile {
         display: contents;
@@ -236,8 +279,53 @@ label {
         display: none;
     }
     article {
-    position: relative;
-    top: auto;
-    left: 0;
+        position: relative;
+        top: auto;
+        left: 0;
+        max-width: 100%;
+        display: grid;
     }
+    #rio {
+        display: none;
+    }
+    article h1 {
+        font-size: 10vw;
+    }
+    .left {
+        max-width: 100%;
+    }
+    article h2 {
+        font-size: 5vw;
+    }
+    .botao {
+        padding: 20px;
+        border: 1px solid black;
+    }
+    #ajuda a img {
+        width: 20vw;
+    }
+    #conclusao a img {
+        width: 20vw;
+        border: 1px solid black;
+    }
+    #conclusao .botao {
+        border: none;
+    }
+    #grafico img {
+        width: 100vw;
+    }
+    footer {
+        grid-template-columns: auto;
+    }
+    #conection {
+        margin-top: 10px;
+        justify-content: center;
+    }
+    #conection img {
+        width: 16vw;
+    }
+    #text img {
+        max-width: 80vw;
+    }
+            
 }
